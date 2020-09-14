@@ -1,13 +1,24 @@
 # Example Scripts
 Scripts utilizing the impacket library to perform various tasks.
 
+[Remote Execution // Interactive Shells](#remote-execution--interactive-shells)  
+[Kerberos // Tickets](#remote-execution--interactive-shells)  
+[Windows Secrets // Credential Dumping](#remote-execution--interactive-shells)  
+[WMI](#wmi)  
+[SMB/MSRPC // Registry // Services](#smbmsrpc--registry--services)  
+[MSSQL / TDS](#mssql--tds)  
+[Files and Formats](#files--formats)  
+[Exploits and Vulnerabilities](#exploits--vulnerabilities)  
+[Misc](#misc)  
+
+---------------------------------------------------------------------------------------------------
 ## Remote Execution // Interactive Shells
 
 ### atexec.py  
 This example executes a command on the target machine through the Task Scheduler service.   
 ATSVC example for some functions implemented, creates, enums, runs, delete jobs.  
 Returns the output of such command  
-
+[atexec.py](https://github.com/SecureAuthCorp/impacket/blob/master/examples/atexec.py)
 
 ### dcomexec.py
 A similar approach to psexec but executing commands through DCOM.    
@@ -45,7 +56,7 @@ PSEXEC like functionality example using RemComSvc (https://github.com/kavika13/R
 
 
 
-
+---------------------------------------------------------------------------------------------------
 ## Kerberos // Tickets
 
 ### findDelegation.py
@@ -132,7 +143,7 @@ Tickets duration is fixed to 10 years from now (although you can manually change
 
 
 
-
+---------------------------------------------------------------------------------------------------
 ## Windows Secrets // Credential Dumping
 
 ### mimikatz.py
@@ -171,7 +182,7 @@ For system secrets, instead of a password you will need to specify the system an
 
 
 
-
+---------------------------------------------------------------------------------------------------
 ## WMI 
 
 ### wmipersist.py
@@ -186,7 +197,7 @@ get description of the objects.
 
 
 
-
+---------------------------------------------------------------------------------------------------
 ## SMB/MSRPC // Registry // Services
 
 ### addcomputer.py
@@ -262,7 +273,7 @@ Simple SMB Server example.
 
 
 
-
+---------------------------------------------------------------------------------------------------
 ## MSSQL / TDS
 
 ### mssqlclient.py
@@ -274,7 +285,7 @@ Simple SMB Server example.
 
 
 
-
+---------------------------------------------------------------------------------------------------
 ## Files + Formats
 
 ### esentutl.py
@@ -285,7 +296,7 @@ Mini shell for browsing an NTFS volume
 
 
 
-
+---------------------------------------------------------------------------------------------------
 ## Exploits // Vulnerabilities
 
 ### exchanger.py
@@ -306,7 +317,7 @@ A few important things:
 
 
 
-
+---------------------------------------------------------------------------------------------------
 ## Misc
 
 ### GetADUsers.py
