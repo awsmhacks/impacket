@@ -26,16 +26,14 @@ You can select different objects to be used to execute the commands.
 Currently supported objects are:
    1. MMC20.Application (49B2791A-B1AE-4C90-9B8E-E860BA07F889) - Tested Windows 7, Windows 10, Server 2012R2
    2. ShellWindows (9BA05972-F6A8-11CF-A442-00A0C90A8F39) - Tested Windows 7, Windows 10, Server 2012R2
-   3. ShellBrowserWindow (C08AFD90-F2A1-11D1-8455-00A0C91F3880) - Tested Windows 10, Server 2012R2
+   3. ShellBrowserWindow (C08AFD90-F2A1-11D1-8455-00A0C91F3880) - Tested Windows 10, Server 2012R2  
 Link:[dcomexec.py](https://github.com/SecureAuthCorp/impacket/blob/master/examples/dcomexec.py)  
 
 
 ### smbexec.py
-A similar approach to psexec w/o using RemComSvc. The technique is described here  
-https://www.optiv.com/blog/owning-computers-without-shell-access
-Our implementation goes one step further, instantiating a local smbserver to receive the  
-output of the commands. This is useful in the situation where the target machine does NOT  
-have a writeable share available.  
+A similar approach to psexec w/o using RemComSvc. 
+Instantiates a local smbserver to receive the output of the commands.   
+This is useful in the situation where the target machine does NOT have a writeable share available.    
 Link:[smbexec.py](https://github.com/SecureAuthCorp/impacket/blob/master/examples/smbexec.py)  
 
 
@@ -46,11 +44,11 @@ account, not SYSTEM, plus, it doesn't generate noisy messages
 in the event log that smbexec.py does when creating a service.  
 Drawback is it needs DCOM, hence, I have to be able to access   
 DCOM ports at the target machine.  
-Link:[wmiexec.py](https://github.com/SecureAuthCorp/impacket/blob/master/examples/wmiexec.py)
+Link:[wmiexec.py](https://github.com/SecureAuthCorp/impacket/blob/master/examples/wmiexec.py)  
 
 
 ### psexec.py
-PSEXEC like functionality example using RemComSvc (https://github.com/kavika13/RemCom)  
+PSEXEC like functionality example using [RemComSvc](https://github.com/kavika13/RemCom)      
 Link:[psexec.py](https://github.com/SecureAuthCorp/impacket/blob/master/examples/psexec.py)
 
 
