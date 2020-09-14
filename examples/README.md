@@ -18,7 +18,7 @@ Scripts utilizing the impacket library to perform various tasks.
 This example executes a command on the target machine through the Task Scheduler service.   
 ATSVC example for some functions implemented, creates, enums, runs, delete jobs.  
 Returns the output of such command  
-[atexec.py](https://github.com/SecureAuthCorp/impacket/blob/master/examples/atexec.py)
+Link: [atexec.py](https://github.com/SecureAuthCorp/impacket/blob/master/examples/atexec.py)  
 
 ### dcomexec.py
 A similar approach to psexec but executing commands through DCOM.    
@@ -27,6 +27,8 @@ Currently supported objects are:
    1. MMC20.Application (49B2791A-B1AE-4C90-9B8E-E860BA07F889) - Tested Windows 7, Windows 10, Server 2012R2
    2. ShellWindows (9BA05972-F6A8-11CF-A442-00A0C90A8F39) - Tested Windows 7, Windows 10, Server 2012R2
    3. ShellBrowserWindow (C08AFD90-F2A1-11D1-8455-00A0C91F3880) - Tested Windows 10, Server 2012R2
+Link:[dcomexec.py](https://github.com/SecureAuthCorp/impacket/blob/master/examples/dcomexec.py)  
+
 
 ### smbexec.py
 A similar approach to psexec w/o using RemComSvc. The technique is described here  
@@ -34,10 +36,7 @@ https://www.optiv.com/blog/owning-computers-without-shell-access
 Our implementation goes one step further, instantiating a local smbserver to receive the  
 output of the commands. This is useful in the situation where the target machine does NOT  
 have a writeable share available.  
-Keep in mind that, although this technique might help avoiding AVs, there are a lot of  
-event logs generated and you can't expect executing tasks that will last long since Windows  
-will kill the process since it's not responding as a Windows service.  
-Certainly not a stealthy way. 
+Link:[smbexec.py](https://github.com/SecureAuthCorp/impacket/blob/master/examples/smbexec.py)  
 
 
 ### wmiexec.py
@@ -46,11 +45,13 @@ Main advantage here is it runs under the user (has to be Admin)
 account, not SYSTEM, plus, it doesn't generate noisy messages  
 in the event log that smbexec.py does when creating a service.  
 Drawback is it needs DCOM, hence, I have to be able to access   
-DCOM ports at the target machine. 
+DCOM ports at the target machine.  
+Link:[wmiexec.py](https://github.com/SecureAuthCorp/impacket/blob/master/examples/wmiexec.py)
 
 
 ### psexec.py
 PSEXEC like functionality example using RemComSvc (https://github.com/kavika13/RemCom)  
+Link:[psexec.py](https://github.com/SecureAuthCorp/impacket/blob/master/examples/psexec.py)
 
 
 
