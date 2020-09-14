@@ -33,21 +33,21 @@ In the case of vaults, you might need to also provide the user's sid (and the us
 For system secrets, instead of a password you will need to specify the system and security hives.  
 
 
-## esentutl.py
+### esentutl.py
 ESE utility. Allows dumping catalog, pages and tables.  
 
 
-## exchanger.py
+### exchanger.py
 A tool for connecting to MS Exchange via RPC over HTTP v2  
 
 
-## findDelegation.py
+### findDelegation.py
 This module will try to find all delegation relationships in a given domain.  
 Delegation relationships can provide info on specific users and systems to target, as access to these systems will grant access elsewhere also.    
 Unconstrained, constrained, and resource-based constrained delegation types are queried for and displayed.  
 
 
-## GetADUsers.py
+### GetADUsers.py
 This script will gather data about the domain's users and their corresponding email addresses.  
 It will also include some extra information about last logon and last password set attributes.  
 You can enable or disable the the attributes shown in the final table by changing the values in line 184 and
@@ -71,7 +71,7 @@ For those users with such configuration, a John The Ripper output will be genera
 you can send it for cracking.  
 
 
-## getPac.py
+### getPac.py
 This script will get the PAC of the specified target user just having a normal authenticated user credentials.  
 It does so by using a mix of [MS-SFU]'s S4USelf + User to User Kerberos Authentication.  
 Original idea (or accidental discovery :) ) of adding U2U capabilities inside a S4USelf by Benjamin Delpy (@gentilkiwi)  
@@ -96,7 +96,7 @@ will encrypt the ticket with the account the SPN is running under, this could be
 bruteforcing attack of the SPNs account NTLM hash if we can gather valid TGS for those SPNs.  
 
 
-## goldenPac.py
+### goldenPac.py
 MS14-068 Exploit. Kudos to @BiDOrD for pulling it up first!   
 Well done :).  
 This one also established a SMBConnection and PSEXEcs the   
@@ -187,7 +187,7 @@ domain DNS (and the right search domain).
 Responds to nmap scans as specified host  
 
 
-## ntfs-read.py
+### ntfs-read.py
 Mini shell for browsing an NTFS volume  
 
 
@@ -231,7 +231,7 @@ Remote registry manipulation tool.
 The idea is to provide similar functionality as the REG.EXE Windows utility.  
 
 
-## registry-read.py
+### registry-read.py
 A Windows Registry Reader Example  
 
 
