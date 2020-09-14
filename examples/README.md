@@ -329,29 +329,14 @@ If so, you can use the -all-users parameter.
 
 
 ### [karmaSMB.py](https://github.com/SecureAuthCorp/impacket/blob/master/examples/karmaSMB.py)
-The idea of this script is to answer any file read request  
-with a set of predefined contents based on the extension   
-asked, regardless of the sharename and/or path.  
-When executing this script w/o a config file the pathname   
-file contents will be sent for every request.   
+The idea of this script is to answer any file read request with a set of predefined contents based on the extension asked.    
+When executing this script w/o a config file the pathname file contents will be sent for every request.     
 If a config file is specified, format should be this way:
    <extension> = <pathname>
 for example:
    bat = /tmp/batchfile
    com = /tmp/comfile
    exe = /tmp/exefile
-The SMB2 support works with a caveat. If two different  
-filenames at the same share are requested, the first  
-one will work and the second one will not work if the request  
-is performed right away. This seems related to the   
-QUERY_DIRECTORY request, where we return the files available.  
-In the first try, we return the file that was asked to open.  
-In the second try, the client will NOT ask for another   
-QUERY_DIRECTORY but will use the cached one. This time the new file  
-is not there, so the client assumes it doesn't exist.  
-After a few seconds, looks like the client cache is cleared and  
-the operation works again. Further research is needed trying  
-to avoid this from happening.  
 
 
 
